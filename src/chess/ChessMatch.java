@@ -43,10 +43,14 @@ public class ChessMatch {
 		return capturedPiece;
 	}
 	
-	// Método para validar a posição de origem, ou seja, se existe peça nessa posição.
+	// Método para validar a posição de origem. Se existe peça nessa posição e se existem
+	// movimentos possíveis.
 	private void validateSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
-			throw new ChessException("There is no piece on source position");
+			throw new ChessException("There is no piece on source position.");
+		}
+		if(!board.piece(position).isThereAnyPossibleMove()) {
+			throw new ChessException("There is no possible moves for the chosen piece.");
 		}
 	}
 	

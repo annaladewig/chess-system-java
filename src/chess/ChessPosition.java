@@ -30,9 +30,9 @@ public class ChessPosition {
 	 * Para achar a linha da posição da matriz, é só pegar 8 e subtrair do valor da
 	 * linha na posição do xadrez. 
 	 * 
-	 * Para achar a coluna da posição da matriz, é só
-	 * subtrair a coluna do xadrez do caractere "a". Exemplo: o código unicode do
-	 * caractere "b" e subtrair do código unicode do caractere "a", resulta 1.
+	 * Para achar a coluna da posição da matriz, é só subtrair a coluna do xadrez do 
+	 * caractere "a". Exemplo: o código unicode do caractere "b" e subtrair do código
+	 * unicode do caractere "a", resulta 1.
 	 */
 	protected Position toPosition() {
 		return new Position(8 - row, column - 'a');
