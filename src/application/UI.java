@@ -31,6 +31,13 @@ public class UI { // UI = User Interface
 	public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+	
+	// Método para limpar a tela.
+	// https://stackoverflow.com/questions/2979383/java-clear-the-console
+	public static void clearScreen() {
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
 
 	// Método para ler uma posição do usuário
 	public static ChessPosition readChessPosition(Scanner sc) {
