@@ -26,7 +26,7 @@ public class Board {
 	// Método para acessar a peça, pela linha e coluna.
 	public Piece piece(int row, int column) {
 		if (!positionExists(row, column)) {
-			throw new BoardException("Position not on the board");
+			throw new BoardException("Position not on the board.");
 		}
 		return pieces[row][column];
 	}
@@ -34,7 +34,7 @@ public class Board {
 	// Método para acessar a peça pela posição
 	public Piece piece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Position not on the board");
+			throw new BoardException("Position not on the board.");
 		}
 		return pieces[position.getRow()][position.getColumn()];
 	}
@@ -50,7 +50,7 @@ public class Board {
 	// Método para retirar a peça do tabuleiro.
 	public Piece removePiece(Position position) {
 		if(!positionExists(position)) {
-			throw new BoardException("Position not on the board");
+			throw new BoardException("Position not on the board.");
 		}
 		if (piece(position) == null) {
 			return null;
@@ -74,7 +74,7 @@ public class Board {
 	// Método que verifica se existe uma peça na posição informada.
 	public boolean thereIsAPiece(Position position) {
 		if (!positionExists(position)) {
-			throw new BoardException("Position not on the board");
+			throw new BoardException("Position not on the board.");
 		}
 		return piece(position) != null;
 	}
