@@ -57,7 +57,7 @@ public class UI { // UI = User Interface
 	}
 	
 	// Método para imprimir o tabuleiro com o turno, a indicação do jogador da vez,
-	// e as peças capturadas.
+	// as peças capturadas e se a partida está em check.
 	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
 		printBoard(chessMatch.getPieces());
 		System.out.println();
@@ -65,6 +65,9 @@ public class UI { // UI = User Interface
 		System.out.println();
 		System.out.println("Turn : " + chessMatch.getTurn());
 		System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+		if (chessMatch.getCheck()) {
+			System.out.println("CHECK!");
+		}
 	}
 	
 	// Método para imprimir o tabuleiro
